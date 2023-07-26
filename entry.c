@@ -40,6 +40,15 @@ int main(int argc, char **argv)
 			line_cnt++;
 			continue;
 		}
+		str = strtok(buffer, " \t\n");
+		if (!str || *str == '#')
+		{
+			line_cnt++;
+			continue;
+		}
+		global.arg = strtok(NULL, " \t\n");
+		opcode(&stack, str, line_cnt);
+		line_cnt++;
 	}
 	free(buffer);
 	free_st(stack);
