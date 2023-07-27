@@ -3,16 +3,16 @@
 /**
 * rotl - rotates the first element of the stack
 * @stack: stack head
-* @line_count: line count
+* @line_cnt: line count
 *
 * Return: void
 */
-void rotl(stack_t **stack, unsigned int line_count)
+void rotl(stack_t **stack, unsigned int line_cnt)
 {
 	stack_t *l;
 	stack_t *r;
 
-	(void) line_count;
+	(void) line_cnt;
 	if (!stack || !*stack || !(*stack)->next)
 		return;
 

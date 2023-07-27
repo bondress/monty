@@ -21,6 +21,7 @@
 			{"pchar", pchar},	\
 			{"pstr", pstr},	\
 			{"rotl", rotl}, \
+			{"rotr", rotr},	\
 		{                     \
 			NULL, NULL      \
 		}                     \
@@ -90,6 +91,7 @@ void mod(stack_t **stack, unsigned int line_cnt);
 void pchar(stack_t **stack, unsigned int line_cnt);
 void pstr(stack_t **stack, unsigned int line_cnt);
 void rotl(stack_t **stack, unsigned int line_cnt);
+void rotr(stack_t **stack, unsigned int line_cnt);
 
 void opcode(stack_t **stack, char *str, unsigned int line_cnt);
 
