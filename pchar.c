@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <string.h>
 #include "monty.h"
 
@@ -17,7 +16,7 @@ void pchar(stack_t **stack, unsigned int line_cnt)
 		exit(EXIT_FAILURE);
 		return;
 	}
-	if ((*stack)->next->n < 0 || (*stack)->next->n > 127)
+	if (((*stack)->n) > 127 || ((*stack)->n) < 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
 		exit(EXIT_FAILURE);
